@@ -26,7 +26,8 @@
     (def start-dir (os/cwd))
     (def td (sh/$<_ mktemp -d))
     (os/cd td)
-    (defer (do (os/cd start-dir)
+    (defer (do 
+             (os/cd start-dir)
              (sh/$ rm -rf ,td))
       (spit
         "project.janet"
