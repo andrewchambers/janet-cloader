@@ -32,9 +32,9 @@
         "project.janet"
         (string/format
           ```
-	  	  (declare-project :name %q)
-		  (declare-native :name %q :source @[%q])
-	  	  ```
+	  	    (declare-project :name %q)
+		      (declare-native :name %q :source @[%q])
+	  	    ```
           base-noext base-noext c-path))
       (sh/$ jpm build)
       (sh/$ cp
